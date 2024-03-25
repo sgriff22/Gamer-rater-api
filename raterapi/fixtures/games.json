@@ -1,0 +1,132 @@
+[
+    {
+      "model": "raterapi.Game",
+      "pk": 1,
+      "fields": {
+        "user_id": 1,
+        "title": "The Legend of Zelda: Breath of the Wild",
+        "designer": "Nintendo EPD",
+        "year": 2017,
+        "number_of_players": 1,
+        "play_time": 60,
+        "age": "10+"
+      }
+    },
+    {
+      "model": "raterapi.Game",
+      "pk": 2,
+      "fields": {
+        "user_id": 2,
+        "title": "Red Dead Redemption 2",
+        "designer": "Rockstar Games",
+        "year": 2018,
+        "number_of_players": 1,
+        "play_time": 120,
+        "age": "18+"
+      }
+    },
+    {
+      "model": "raterapi.Game",
+      "pk": 3,
+      "fields": {
+        "user_id": 1,
+        "title": "God of War",
+        "designer": "Santa Monica Studio",
+        "year": 2018,
+        "number_of_players": 1,
+        "play_time": 80,
+        "age": "18+"
+      }
+    },
+    {
+      "model": "raterapi.Game",
+      "pk": 4,
+      "fields": {
+        "user_id": 3,
+        "title": "Fortnite",
+        "designer": "Epic Games",
+        "year": 2017,
+        "number_of_players": 4,
+        "play_time": 45,
+        "age": "12+"
+      }
+    },
+    {
+      "model": "raterapi.Game",
+      "pk": 5,
+      "fields": {
+        "user_id": 2,
+        "title": "Minecraft",
+        "designer": "Mojang Studios",
+        "year": 2011,
+        "number_of_players": 8,
+        "play_time": 60,
+        "age": "7+"
+      }
+    },
+    {
+      "model": "raterapi.Game",
+      "pk": 6,
+      "fields": {
+        "user_id": 4,
+        "title": "Grand Theft Auto V",
+        "designer": "Rockstar North",
+        "year": 2013,
+        "number_of_players": 1,
+        "play_time": 120,
+        "age": "18+"
+      }
+    },
+    {
+      "model": "raterapi.Game",
+      "pk": 7,
+      "fields": {
+        "user_id": 1,
+        "title": "Super Mario Odyssey",
+        "designer": "Nintendo EPD",
+        "year": 2017,
+        "number_of_players": 2,
+        "play_time": 60,
+        "age": "10+"
+      }
+    },
+    {
+      "model": "raterapi.Game",
+      "pk": 8,
+      "fields": {
+        "user_id": 3,
+        "title": "Overwatch",
+        "designer": "Blizzard Entertainment",
+        "year": 2016,
+        "number_of_players": 6,
+        "play_time": 45,
+        "age": "12+"
+      }
+    },
+    {
+      "model": "raterapi.Game",
+      "pk": 9,
+      "fields": {
+        "user_id": 2,
+        "title": "Call of Duty: Modern Warfare",
+        "designer": "Infinity Ward",
+        "year": 2019,
+        "number_of_players": 4,
+        "play_time": 60,
+        "age": "18+"
+      }
+    },
+    {
+      "model": "raterapi.Game",
+      "pk": 10,
+      "fields": {
+        "user_id": 4,
+        "title": "Fallout 4",
+        "designer": "Bethesda Game Studios",
+        "year": 2015,
+        "number_of_players": 1,
+        "play_time": 90,
+        "age": "18+"
+      }
+    }
+  ]
