@@ -9,12 +9,14 @@ class CategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Category
-        fields = ("id", "label",)
+        fields = ["id", "label"]
 
 
 class CategoryViewSet(viewsets.ViewSet):
 
     def list(self, request):
         categories = Category.objects.all()
-        serializer = CategorySerializer(categories, many=True, context={'request': request})
+        serializer = CategorySerializer(
+            categories, many=True, context={"request": request}
+        )
         return Response(serializer.data)
