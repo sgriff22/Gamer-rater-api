@@ -10,4 +10,4 @@ python3 manage.py loaddata tokens
 python3 manage.py loaddata categories
 python3 manage.py loaddata games
 python3 manage.py loaddata gamecategories
-
+python3 manage.py loaddata reviews
