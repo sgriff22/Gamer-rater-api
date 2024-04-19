@@ -7,6 +7,7 @@ from rest_framework.authtoken.models import Token
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from rest_framework.authentication import TokenAuthentication
+from raterapi.models import Review, Rating
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -62,13 +63,36 @@ class UserViewSet(viewsets.ViewSet):
         # Get the authenticated user
         user = request.user
 
+        # Get ratings associated with the user
+        ratings = user.ratings.all()
+
+        class RatingSerializer(serializers.ModelSerializer):
+            class Meta:
+                model = Rating
+                fields = ["game_id", "rating"]
+
+        # Serialize the ratings data
+        rating_serializer = RatingSerializer(ratings, many=True)
+
+        # Get all the reviews associated with the user
+        reviews = user.games_reviewed.all()
+
+        class ReviewSerializer(serializers.ModelSerializer):
+            class Meta:
+                model = Review
+                fields = ["game_id"]
+
+        # Serialize the reviews data
+        review_serializer = ReviewSerializer(reviews, many=True)
+
         # Serialize the user data
         user_data = {
             "id": user.id,
             "username": user.username,
             "first_name": user.first_name,
             "last_name": user.last_name,
-            # Add more fields as needed
+            "ratings": rating_serializer.data,
+            "reviews": review_serializer.data,
         }
 
         # Return the serialized user data

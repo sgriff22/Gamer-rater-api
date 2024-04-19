@@ -20,6 +20,7 @@ class GameSerializer(serializers.ModelSerializer):
             "play_time",
             "age",
             "categories",
+            "average_rating",
         ]
 
 
