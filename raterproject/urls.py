@@ -7,6 +7,7 @@ from raterapi.views import (
     CategoryViewSet,
     ReviewViewSet,
     GameCategoryViewSet,
+    RatingViewSet
 )
 
 router = routers.DefaultRouter(trailing_slash=False)
@@ -14,6 +15,7 @@ router.register(r"games", GameViewSet, "game")
 router.register(r"categories", CategoryViewSet, "category")
 router.register(r"reviews", ReviewViewSet, "review")
 router.register(r"game_categories", GameCategoryViewSet, "game_category")
+router.register(r"ratings", RatingViewSet, "rating" )
 
 urlpatterns = [
     path("", include(router.urls)),

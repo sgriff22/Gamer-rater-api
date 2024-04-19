@@ -15,3 +15,24 @@ class Game(models.Model):
     categories = models.ManyToManyField(
         "Category", through="GameCategory", related_name="games"
     )
+
+    @property
+    def average_rating(self):
+        """Average rating calculated attribute for each game"""
+        ratings = self.ratings.all()
+
+        # Sum all of the ratings for the game
+        total_rating = 0
+        try:
+            for rating in ratings:
+                total_rating += rating.rating
+
+            # Calculate the average and return it.
+            average = total_rating / len(ratings)
+            # Round the average to one decimal point
+            average = round(average, 1)
+
+        except ZeroDivisionError:
+            average = 0
+
+        return average
