@@ -6,6 +6,7 @@ from rest_framework.authtoken.models import Token
 
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
+from rest_framework.authentication import TokenAuthentication
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -18,6 +19,7 @@ class UserSerializer(serializers.ModelSerializer):
 class UserViewSet(viewsets.ViewSet):
     queryset = User.objects.all()
     permission_classes = [permissions.AllowAny]
+    authentication_classes = [TokenAuthentication]  # Add this line
 
     @action(detail=False, methods=["post"], url_path="register")
     def register_account(self, request):
@@ -47,3 +49,27 @@ class UserViewSet(viewsets.ViewSet):
             return Response(
                 {"error": "Invalid Credentials"}, status=status.HTTP_400_BAD_REQUEST
             )
+
+    @action(detail=False, methods=["get"], url_path="user-details")
+    def get_user_details(self, request):
+        # Ensure the user is authenticated
+        if not request.user.is_authenticated:
+            return Response(
+                {"error": "Authentication credentials were not provided."},
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
+
+        # Get the authenticated user
+        user = request.user
+
+        # Serialize the user data
+        user_data = {
+            "id": user.id,
+            "username": user.username,
+            "first_name": user.first_name,
+            "last_name": user.last_name,
+            # Add more fields as needed
+        }
+
+        # Return the serialized user data
+        return Response(user_data, status=status.HTTP_200_OK)
