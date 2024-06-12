@@ -1,0 +1,114 @@
+[
+  {
+    "model": "raterapi.gamepicture",
+    "pk": 1,
+    "fields": {
+      "game": 1,
+      "action_pic": "actionimages/user_image-deac0f75-130d-4c3d-90ce-463ddb7475bc.webp"
+    }
+  },
+  {
+    "model": "raterapi.gamepicture",
+    "pk": 2,
+    "fields": {
+      "game": 1,
+      "action_pic": "actionimages/user_image-df7d2999-6a57-4e5c-b3d1-ba647f664b84.jpeg"
+    }
+  },
+  {
+    "model": "raterapi.gamepicture",
+    "pk": 3,
+    "fields": {
+      "game": 1,
+      "action_pic": "actionimages/user_image-373a142f-2a6b-474a-aae9-3d3b107163a8.jpeg"
+    }
+  },
+  {
+    "model": "raterapi.gamepicture",
+    "pk": 4,
+    "fields": {
+      "game": 1,
+      "action_pic": "actionimages/user_image-a8bd1094-9cbd-48e9-9485-17dc23032e18.jpeg"
+    }
+  },
+  {
+    "model": "raterapi.gamepicture",
+    "pk": 5,
+    "fields": {
+      "game": 1,
+      "action_pic": "actionimages/user_image-44b32c7a-f363-4dc0-8273-521e9ce32969.webp"
+    }
+  },
+  {
+    "model": "raterapi.gamepicture",
+    "pk": 6,
+    "fields": {
+      "game": 1,
+      "action_pic": "actionimages/user_image-9de940f9-ba20-444b-ae80-cc9e0d750de9.jpeg"
+    }
+  },
+  {
+    "model": "raterapi.gamepicture",
+    "pk": 7,
+    "fields": {
+      "game": 2,
+      "action_pic": "actionimages/user_image-2d961050-8e3d-4419-ad67-4563d25d2532.jpeg"
+    }
+  },
+  {
+    "model": "raterapi.gamepicture",
+    "pk": 8,
+    "fields": {
+      "game": 2,
+      "action_pic": "actionimages/user_image-b8ee3294-e29a-4ae3-86ac-c3faf82d3312.avif"
+    }
+  },
+  {
+    "model": "raterapi.gamepicture",
+    "pk": 9,
+    "fields": {
+      "game": 2,
+      "action_pic": "actionimages/user_image-4ec9a498-23b0-4a55-8c01-31ee2ef98f93.avif"
+    }
+  },
+  {
+    "model": "raterapi.gamepicture",
+    "pk": 10,
+    "fields": {
+      "game": 2,
+      "action_pic": "actionimages/user_image-075fb901-5e5b-46a7-8752-c1b475c172a6.avif"
+    }
+  },
+  {
+    "model": "raterapi.gamepicture",
+    "pk": 11,
+    "fields": {
+      "game": 4,
+      "action_pic": "actionimages/user_image-fa83b704-d9dc-433c-8d0f-3821fb85bbaf.jpeg"
+    }
+  },
+  {
+    "model": "raterapi.gamepicture",
+    "pk": 12,
+    "fields": {
+      "game": 4,
+      "action_pic": "actionimages/user_image-2f7aa42a-9231-46b9-be93-436ccda6f956.jpeg"
+    }
+  },
+  {
+    "model": "raterapi.gamepicture",
+    "pk": 13,
+    "fields": {
+      "game": 4,
+      "action_pic": "actionimages/user_image-3618a912-e161-4bfb-8e6a-9ec9d87ba1bd.jpeg"
+    }
+  },
+  {
+    "model": "raterapi.gamepicture",
+    "pk": 14,
+    "fields": {
+      "game": 4,
+      "action_pic": "actionimages/user_image-41c748cd-fe76-45ba-a799-f1bb24c91084.jpeg"
+    }
+  }
+]

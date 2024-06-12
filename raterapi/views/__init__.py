@@ -4,3 +4,4 @@ from .categories import CategoryViewSet
 from .reviews import ReviewViewSet
 from .game_category import GameCategoryViewSet
 from .ratings import RatingViewSet
+from .game_pictures import GamePictureViewSet
