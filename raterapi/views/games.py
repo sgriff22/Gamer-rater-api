@@ -27,7 +27,32 @@ class GameSerializer(serializers.ModelSerializer):
 class GameViewSet(viewsets.ViewSet):
 
     def list(self, request):
-        games = Game.objects.all()
+        search_text = self.request.query_params.get("q", None)
+        orderby = self.request.query_params.get("orderby", None)
+
+        if search_text:
+            games = Game.objects.filter(title__contains=search_text)
+            if orderby:
+                if orderby == "oldest":
+                    games = games.order_by("year")
+                elif orderby == "newest":
+                    games = games.order_by("-year")
+                elif orderby == "play_time":
+                    games = games.order_by("play_time")
+                elif orderby == "designer":
+                    games = games.order_by("designer")
+        elif orderby:
+            if orderby == "oldest":
+                games = Game.objects.order_by("year")
+            elif orderby == "newest":
+                games = Game.objects.order_by("-year")
+            elif orderby == "play_time":
+                games = Game.objects.order_by("play_time")
+            elif orderby == "designer":
+                games = Game.objects.order_by("designer")
+        else:
+            games = Game.objects.all()
+
         serializer = GameSerializer(games, many=True, context={"request": request})
         return Response(serializer.data)
 
